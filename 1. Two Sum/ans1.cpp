@@ -1,5 +1,5 @@
 /* sort and find */
-/* time cost: 9ms */
+/* time cost: 6ms */
 /* time complexity: O(nlog(n)) */
 class Solution {
 public:
@@ -8,11 +8,11 @@ public:
     vector<int> newn = nums;
     std::sort(nums.begin(), nums.end());
     for (vector<int>::iterator iter = nums.begin(); iter != nums.end(); ++iter){
-        for (auto iter2 = nums.end() - 1; iter2 != iter; --iter2){
+        for (vector<int>::iterator iter2 = nums.end() - 1; iter2 != iter; --iter2){
             if (*iter + *iter2 < target)
                 break;
             else if (*iter + *iter2 == target){
-                for(auto it = newn.begin(); it != newn.end(); it++){
+                for(vector<int>::iterator it = newn.begin(); it != newn.end(); it++){
                     if (*it == *iter &&
                        (iter >= newn.begin() && iter <= newn.end()) == false) {
                         iter = it;
