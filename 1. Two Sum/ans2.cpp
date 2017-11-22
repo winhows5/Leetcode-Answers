@@ -1,6 +1,7 @@
 /* sort and find */
-/* time cost: 6ms */
+/* time cost: 6ms (77.45%)*/
 /* time complexity: O(nlog(n)) */
+
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
