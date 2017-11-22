@@ -1,6 +1,13 @@
 /* One-pass hash */
-/* time cost: 6ms */
+/* time cost: 3ms (99.53%) */
 /* time complexity: O(n) */
+
+static int x = [](){ 
+    std::ios::sync_with_stdio(false); 
+    cin.tie(NULL);  
+    return 0; 
+}();
+
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
