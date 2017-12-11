@@ -1,5 +1,6 @@
 /* time cost: 42ms (99.87%) */
 /* time complexity: O(n)    */
+
 static int x = [](){
     std::ios::sync_with_stdio(false);
     cin.tie(NULL);
