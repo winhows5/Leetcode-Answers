@@ -1,11 +1,13 @@
 /* time cost: 3ms (9.67%) */
-/* time complexity: O(n)  */ 
+/* time complexity: O(n)  */
+
 static int x = [](){
     std::ios::sync_with_stdio(false);
     cin.tie(NULL);
     return 0;
 }();
 
+// It also can be wrote as a recursion algorithm.
 class Solution {
 public:
     vector<string> generateParenthesis(int n) {
