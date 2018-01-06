@@ -1,3 +1,6 @@
+/* time cost: 24ms (96.95%)        */
+/* time complexity: O(Nlog(lists)) */
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
