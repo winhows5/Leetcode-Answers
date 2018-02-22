@@ -1,4 +1,4 @@
-/* time cost: 5ms (33.22%) */
+/* time cost: 5ms (37.22%) */
 /* time complexity: O(n)   */
 
 static int x = [](){
