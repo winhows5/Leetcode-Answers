@@ -1,5 +1,5 @@
 /* time cost: 15ms (41.65%) */
-/* time complexity: O(n^k)  */
+/* time complexity: O(k^n)  */
 
 static int x = [](){
     std::ios::sync_with_stdio(false);
