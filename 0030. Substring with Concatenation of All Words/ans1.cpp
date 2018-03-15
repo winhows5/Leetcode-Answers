@@ -23,7 +23,7 @@ public:
         
         for(i = 0; i < wL; ++i) { 
             start = cur = i; 
-            wCnt = wSize; // reset the words to be searched
+            wCnt = wSize; 
             while (start <= sL - wL*wSize) {
                 if (map.count(s.substr(cur, wL)) == 0){
                     wCnt = wSize;
@@ -40,16 +40,16 @@ public:
                 }
                 else {
                     --map[s.substr(cur,wL)]; 
-                    if(--wCnt == 0) { // update wCnt, if we find all the words
+                    if(--wCnt == 0) {
                         res.push_back(start); 
                         ++map[s.substr(start,wL)]; 
-                        start +=wL;
+                        start += wL;
                         ++wCnt;
                     }
                 }
-                cur += wL; // update cur
+                cur += wL; 
             }
-            for (; start<cur; start+=wL)  ++map[s.substr(start,wL)]; //reset the map count
+            for (; start<cur; start+=wL)  ++map[s.substr(start,wL)]; 
         }
         return res;
     }
