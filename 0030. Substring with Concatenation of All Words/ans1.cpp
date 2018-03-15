@@ -1,5 +1,11 @@
-/* time cost: 18ms (100.00%) */
+/* time cost: 13ms (100.00%) */
 /* time complexity: O(nm)   */
+
+static int x = [](){
+    std::ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    return 0;
+}();
 
 class Solution {
 public:
@@ -14,19 +20,19 @@ public:
         
         for(i = 0; i < wSize; ++i)
             map[words[i]] = map.count(words[i])>0? ++map[words[i]]:1;
-            
+        
         for(i = 0; i < wL; ++i) { 
             start = cur = i; 
             wCnt = wSize; // reset the words to be searched
-            while (start <= sL-wL*wSize) {
-                if (map.count(s.substr(cur,wL)) == 0){
+            while (start <= sL - wL*wSize) {
+                if (map.count(s.substr(cur, wL)) == 0){
                     wCnt = wSize;
                     for (; start != cur; start += wL) 
                         ++map[s.substr(start,wL)];
                     start += wL; 
                 }
-                else if (map[s.substr(cur,wL)] == 0){
-                    for (;s.substr(cur,wL)!=s.substr(start,wL); start+=wL) {
+                else if (map[s.substr(cur, wL)] == 0){
+                    for (; s.substr(cur,wL) != s.substr(start,wL); start+=wL) {
                         ++map[s.substr(start,wL)];
                         ++wCnt;
                     }
