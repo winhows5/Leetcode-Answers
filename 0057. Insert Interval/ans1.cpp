@@ -28,6 +28,7 @@ public:
             }
             else if (intervals[i].start > end) {
                 ans.push_back(Interval(start, end));
+                // ans.insert(ans.end(), intervals.begin() + i, intervals.end());
                 copy(intervals.begin() + i, intervals.end(), back_inserter(ans));
                 return ans;
             }
