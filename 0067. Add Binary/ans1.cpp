@@ -15,38 +15,17 @@ public:
         int i = a.size() - 1; 
         int j = b.size() - 1;
         while (i >= 0 || j >= 0) {
-            if (i < 0) {
-                if (b[j] + w == '2') {
-                    ans = '0' + ans;
-                    w = 1;
-                }
-                else {
-                    ans = (char)(b[j] + w) + ans; 
-                    w = 0;
-                }
+            if (j >= 0) {
+                w += b[j] - '0';
+                --j;
             }
-            else if (j < 0) {
-                if (a[i] + w == '2') {
-                    ans = '0' + ans;
-                    w = 1;
-                }
-                else {
-                    ans = (char)(a[i] + w) + ans; 
-                    w = 0;
-                }
+            if (i >= 0) {
+                w += a[i] - '0';
+                --i;
             }
-            else if (a[i] == '0' && b[j] == '0') {
-                ans = (char)('0' + w) + ans;
-                w = 0;    
-            }
-            else if (a[i] == '1' && b[j] == '1') {
-                ans = (char)('0' + w) + ans;
-                w = 1; 
-            }
-            else ans = w ? ('0' + ans) : ('1' + ans);
-
-            --i;
-            --j;
+           
+            ans = (w % 2) ? ('1' + ans) : ('0' + ans);
+            w = w / 2;          
         }
         return w ? ('1' + ans) : ans;
     }
