@@ -7,6 +7,7 @@ static int x = [](){
     return 0;
 }();
 
+// Hard to solve concisely as that
 class Solution {
 public:
     int maximalRectangle(vector<vector<char>>& matrix) {
