@@ -15,7 +15,6 @@ public:
         int ans = 0;
         int tmp_l, tmp_r;
         for (int& c : nums) {
-            cout << c;
             if (cons[c] != 0)
                 continue;
             else {
