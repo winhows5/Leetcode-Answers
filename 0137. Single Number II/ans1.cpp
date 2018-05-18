@@ -2,6 +2,7 @@
 /* time complexity: O(n)    */
  
 // It refers to Finite State Machine. Although I get AC, I do not comprehend it deeply.
+
 static int x = [](){
     std::ios::sync_with_stdio(false);
     cin.tie(NULL);
