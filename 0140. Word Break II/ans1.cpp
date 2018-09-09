@@ -2,7 +2,8 @@
 /* time complexity:    */
 
 
-class Solution {
+class So
+    lution {
     unordered_map<string, vector<string>> m;
 
     vector<string> combine(string word, vector<string> prev){
