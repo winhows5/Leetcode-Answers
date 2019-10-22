@@ -9,19 +9,22 @@ static int x = [](){
 
 class Solution {
 public:
-    int hammingWeight(uint32_t n) {
-        int count = 0;
-        while (n) {
-            n &= (n - 1);
-            count++;
+    uint32_t reverseBits(uint32_t n) {
+        uint32_t res = 0;
+        for(int i=0; i<32; ++i) {
+            res += n & 1;
+            n >>= 1;
+            if (i==31) break;
+            res <<= 1;
         }
-        return count;
+        return res;
         
-    	// int ones = 0;
-    	// while(n!=0) {
-    	// 	ones = ones + (n & 1);
-    	// 	n = n>>1;
-    	// }
-    	// return ones;
+        // whimsy
+        // n = ( n>>16 ) | ( n<<16 );   
+        // n = ( n>>8 & 0x00ff00ff ) | (n<<8 & 0xff00ff00 );
+        // n = ( n>>4 & 0x0f0f0f0f ) | (n<<4 & 0xf0f0f0f0 );
+        // n = ( n>>2 & 0x33333333 ) | (n<<2 & 0xcccccccc );
+        // n = ( n>>1 & 0x55555555 ) | (n<<1 & 0xaaaaaaaa );
+        // return n;
     }
 };
